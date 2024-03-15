@@ -4,7 +4,7 @@ utils::globalVariables(c("dechour", "yp", "y", "up","down"))
 
 
 actogram=function(date,response,from=NULL,to=NULL,scalefac=.5,subtract=0,dble=TRUE,dig=FALSE,
-              border="black", fill="red", cl="B",lwd=0.3,
+              border="black", fill="red", grad=FALSE,lwd=0.3,
               photo=TRUE, latitude=NULL, longitude=NULL, zone=0,twilight ="nautic") {
 
   
@@ -17,6 +17,7 @@ actogram=function(date,response,from=NULL,to=NULL,scalefac=.5,subtract=0,dble=TR
 # dig=T: bin into 0 or 1
 # border_colour: coulor of rectangle edges
 # fill_colour: colour of rectangle fills, relevant only if timepoint separation is large
+# grad==TRUE :plot gradient
 # photo=T: plot sun up and down as lines on left half (0-24 h)
 # longitude, latitude for photoperiod. Default:zone = 0
 # zone:Time zone
@@ -110,7 +111,7 @@ delta=median(diff(pframe$dechour),na.rm=TRUE)#
 
 
 # Make plot with rectangles
-if (toupper(cl)=="GR") {
+if (grad == TRUE) {
   p=ggplot(data=pframe,aes(xmin=dechour,xmax=dechour+delta,ymin=yp,ymax=y,color=y-yp))+geom_rect() 
 } else {
  p=ggplot(data=pframe,aes(xmin=dechour,xmax=dechour+delta,ymin=yp,ymax=y))+geom_rect(colour=border,fill=fill,linewidth=lwd)
@@ -146,7 +147,7 @@ if(ndays>180) ofs=-3 else ofs=.5
 p=p+scale_y_continuous(breaks=sq-ofs,labels=labs,expand=c(0,0))
 
 
-if (toupper(cl)=="GR") p=p+scale_color_gradient(low="gray90", high="gray10")
+if (grad==TRUE) p=p+scale_color_gradient(low="gray90", high="gray10")
 
 p=p+xlab("")
 p=p+ylab("")
@@ -164,6 +165,6 @@ p=p+theme(axis.text.y   = element_text(size=15),
 )
 p=p+theme(legend.position = "none")
 print(p)
-return(invisible(focus))
+invisible(focus)
 }
 
