@@ -17,12 +17,13 @@ makedf(tvar, pvar)
 }
 
 \value{
-a data.frame with two colums: time and variqble (eg activity)
+a data.frame with two colums: time and variable (eg activity)
 }
 
 
 \examples{
  \dontrun{
+ 
 data(caradat) #unevenly sampled
 focus=actogram(caradat$Date, caradat$Activity, dble=TRUE, photo=FALSE, zone=1, 
   from="1970-01-01 00:00:00",to="1970-01-14 00:00:00")

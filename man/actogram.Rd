@@ -20,7 +20,7 @@ actogram(date, response,from ,to, scalefac, subtract, dble,
   \item{to}{date for end of subsection}
   \item{scalefac}{one day is 1.0 wide. Use >1 if plots are exaggerated }
   \item{subtract}{value to subtract from response.}
-  \item{dble}{logical Double plot? Ie day1 day2 day2 day3 day3 day4 ...}
+  \item{dble}{logical Double plot? Ie day1 day2, day2 day3, day3 day4 ...}
   \item{dig}{logical Digitize to 0 1 based on mean?}
   \item{border}{border_colour of rectangle edges }
   \item{fill}{colour of rectangle fills, relevant only if timepoint separation is large}
@@ -29,7 +29,7 @@ actogram(date, response,from ,to, scalefac, subtract, dble,
   \item{photo}{logical Plot photoperiod? Photo is true when location is entered.}
   \item{latitude}{animal location}
   \item{longitude}{animal location}
-  \item{zone}{time zone of location. Default:0 = Greewich}
+  \item{zone}{time zone of location. Default:0 = Greenwich}
   \item{twilight}{"rise/set", "civil" or "nautic"}  
 }
 
@@ -39,6 +39,7 @@ This function plots actograms of both unevenly and evenly sampled data. It only 
 
 \examples{
 \dontrun{
+
 data(caradat)
 actogram(caradat$Date, caradat$Activity, dble=TRUE, photo=FALSE, dig=TRUE, fill="blue")
 
