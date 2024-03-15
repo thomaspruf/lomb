@@ -9,7 +9,7 @@ Plots an actogram for a time series with irregular (or regular) sampling interva
 }
 \usage{
 actogram(date, response,from ,to, scalefac, subtract, dble,
-  dig, border, fill, cl, lwd, photo,latitude, longitude, zone, twilight)
+  dig, border, fill, grad, lwd, photo,latitude, longitude, zone, twilight)
 }
 
 
@@ -24,9 +24,9 @@ actogram(date, response,from ,to, scalefac, subtract, dble,
   \item{dig}{logical Digitize to 0 1 based on mean?}
   \item{border}{border_colour of rectangle edges }
   \item{fill}{colour of rectangle fills, relevant only if timepoint separation is large}
-  \item{cl}{colour scheme eiher GRc or B}
-  \item{lwd}{linw width of rectangles}
-  \item{photo}{logical plot photoperiod? Photo is true when location is entered.}
+  \item{grad}{logical Plot gradient?}
+  \item{lwd}{line width of rectangles}
+  \item{photo}{logical Plot photoperiod? Photo is true when location is entered.}
   \item{latitude}{animal location}
   \item{longitude}{animal location}
   \item{zone}{time zone of location. Default:0 = Greewich}
@@ -44,8 +44,7 @@ actogram(caradat$Date, caradat$Activity, dble=TRUE, photo=FALSE, dig=TRUE, fill=
 
 
 data(deerdat)
-actogram(deerdat$Zeit, deerdat$Akt, cl="gr",from="2010-10-01 00:00:00",to="2011-03-31 00:00:00",
+actogram(deerdat$Zeit, deerdat$Akt, grad=TRUE,from="2010-10-01 00:00:00",to="2011-03-31 00:00:00",
 latitude=47.1415,longitude=9.5215,zone=1,twilight="nautic")
-#cl should be anything but gr if GR (gradient) is not desired.
 }
 }

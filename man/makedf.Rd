@@ -24,7 +24,7 @@ a data.frame with two colums: time and variqble (eg activity)
 \examples{
  \dontrun{
 data(caradat) #unevenly sampled
-focus=actogram(caradat$Date, caradat$Activity, dble=TRUE, photo=FALSE, zone=1, cl="b", 
+focus=actogram(caradat$Date, caradat$Activity, dble=TRUE, photo=FALSE, zone=1, 
   from="1970-01-01 00:00:00",to="1970-01-14 00:00:00")
 df=makedf (focus$date, focus$plotvar)
 lsp(df, type="period",ofac=5,from=12,to=36)
