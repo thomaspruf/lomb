@@ -110,6 +110,8 @@ delta=median(diff(pframe$dechour),na.rm=TRUE)#
 
 
 
+lim=max(pframe$date)
+          
 # Make plot with rectangles
 if (grad == TRUE) {
   p=ggplot(data=pframe,aes(xmin=dechour,xmax=dechour+delta,ymin=yp,ymax=y,color=y-yp))+geom_rect() 
@@ -165,6 +167,8 @@ p=p+theme(axis.text.y   = element_text(size=15),
 )
 p=p+theme(legend.position = "none")
 print(p)
+ix=which(focus$date > lim)
+focus=focus[-ix,]
 invisible(focus)
 }
 
