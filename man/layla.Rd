@@ -2,7 +2,7 @@
 \alias{layla}
 \docType{data}
 \title{
-Activiy of a dog
+Activiy of a dog.
 }
 \description{
 activity and body temperature of a domestic dog in summer 

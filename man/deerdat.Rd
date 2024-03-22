@@ -2,10 +2,10 @@
 \alias{deerdat}
 \docType{data}
 \title{
-Locomotor activiy of a deer
+Locomotor activiy of a deer.
 }
 \description{
-Locomotor activiy and other variables of a red deer free-living in the alps
+Locomotor activiy and other variables of a red deer free-living in the alps.
 }
 \usage{data("deerdat")}
 \format{

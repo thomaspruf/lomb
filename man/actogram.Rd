@@ -2,10 +2,10 @@
 \alias{actogram}
 
 \title{
-plots actogram
+Plot actogram
 }
 \description{
-Plots an actogram for a time series with irregular (or regular) sampling intervals.  
+plots an actogram for a time series with irregular (or regular) sampling intervals.  
 }
 \usage{
 actogram(date, response,from ,to, scalefac, subtract, dble,

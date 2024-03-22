@@ -17,7 +17,7 @@ makedf(tvar, pvar)
 }
 
 \value{
-a data.frame with two colums: time and variable (eg activity)
+a data.frame with two colums: time and variable (eg. activity)
 }
 
 
