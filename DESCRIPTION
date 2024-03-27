@@ -1,8 +1,8 @@
 Package: lomb
 Type: Package
 Title: Lomb-Scargle Periodogram
-Version: 3.0.0
-Date: 2024-03-22
+Version: 2.5.0
+Date: 2024-03-26
 Authors@R: c(
     person(given="Thomas", family="Ruf", email= "Thomas.P.Ruf@me.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-9235-7079")))
